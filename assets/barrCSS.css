@@ -1,1 +1,17 @@
+@font-face {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Agency FB'), local('AgencyFB-Regular'),
+        url(http://allfont.net/cache/fonts/agency-fb_0b9596562659a0772f5e24c22cae921b.woff) format('woff'),
+        url(http://allfont.net/cache/fonts/agency-fb_0b9596562659a0772f5e24c22cae921b.ttf) format('truetype');
+}
+@font-face {
+    font-family: '01 DigitMono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('01 DigitMono'), local('01DigitMono-Regular'),
+        url(http://allfont.es/cache/fonts/01-digitmono_55caf7ebec7baf0a773f3a16825eb55b.woff) format('woff'),
+        url(http://allfont.es/cache/fonts/01-digitmono_55caf7ebec7baf0a773f3a16825eb55b.ttf) format('truetype');
+}
 :root{--fondo:#659df1;--colorL:#fed2ef;--colorM:#8f0071;--colorR:#ae15a3;--grad0:#ad00a9;--grad1:#f900ff;--grad2:#fe72da;--grad3:#ffb2e4;--grad4:#fc7dff;--grad5:#ec3cf0;--grad6:#673AB7;--ter1:#cecf67;--ter2:#ec5556}.grad0YJMM{stop-color:var(--grad0)}.grad1YJMM{stop-color:var(--grad1)}.grad2YJMM{stop-color:var(--grad2)}.grad3YJMM{stop-color:var(--grad3)}.grad4YJMM{stop-color:var(--grad4)}.grad5YJMM{stop-color:var(--grad5)}.grad6YJMM{stop-color:var(--grad6)}.ter1YJMM{stop-color:var(--ter1)}.ter2YJMM{stop-color:var(--ter2)}.textYJMM{font-weight:700;font-stretch:condensed;font-size:26px;line-height:124%;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:var(--colorL);stroke:var(--colorR);stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;paint-order:stroke markers fill}.text2YJMM{font-weight:700;font-stretch:condensed;font-size:12px;line-height:124%;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:var(--colorL);stroke:var(--colorR);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;paint-order:stroke markers fill}.barYJMM{transition:width .4s ease;color-interpolation:sRGB;color-interpolation-filters:linearRGB;vector-effect:none;fill-opacity:1;fill-rule:evenodd;stroke:var(--colorM);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;enable-background:accumulate}.fondoYJMM{fill:var(--fondo);enable-background:accumulate}.lightYJMM{transition:fill 1s ease,stroke 1s ease;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:url(#g);stroke:var(--colorR);stroke-width:2;paint-order:stroke markers fill;enable-background:accumulate}.levelYJMM{font-size:11px;line-height:180%;font-family:'01 DigitMono';-inkscape-font-specification:'01 DigitMono, Normal';writing-mode:lr-tb;text-anchor:middle;fill:var(--colorL);fill-opacity:1;stroke:var(--colorR);stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:.6;paint-order:stroke markers fill}.levelYJMM,.textYJMM{transition:fill 1s ease,stroke 1s ease;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.add{fill:#fbff88;stroke:#c14400}.off{opacity:.6;fill:#acacac;stroke:#0b4200;stroke-opacity:.6}#brillo{transition:transform .4s ease}
