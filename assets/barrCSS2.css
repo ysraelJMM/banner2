@@ -1,0 +1,151 @@
+:root {
+
+              --fondo: #3c3c3c;
+              --colorL: #82ff6f;
+              --colorM: #108f00;
+              --colorR: #0c4200;
+              --grad0: #00ad00;
+              --grad1: #00ff00;
+              --grad2: #60ff3f;
+              --grad3: #9fff88;
+              --grad4: #bcea8e;
+              --grad5: #71f03c;
+              --grad6: #18df1b;
+              --ter1: #77bdd5;
+              --ter2: #3077ac;
+
+      }
+      .grad0YJMM {
+        stop-color: var(--grad0);
+      }
+      .grad1YJMM {
+        stop-color: var(--grad1);
+      }
+      .grad2YJMM {
+        stop-color: var(--grad2);
+      }
+      .grad3YJMM {
+        stop-color: var(--grad3);
+      }
+      .grad4YJMM {
+        stop-color: var(--grad4);
+      }
+      .grad5YJMM {
+        stop-color: var(--grad5);
+      }
+      .grad6YJMM {
+        stop-color: var(--grad6);
+      }
+      .ter1YJMM {
+        stop-color: var(--ter1);
+      }
+      .ter2YJMM {
+        stop-color: var(--ter2);
+      }
+      .textYJMM {
+        font-weight: bold;
+        font-stretch: condensed;
+        font-size: 26px;
+        line-height: 124%;
+        font-family: 'Agency FB';
+        -inkscape-font-specification: 'Agency FB, Bold Condensed';
+        font-variant-ligatures: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: normal;
+        font-feature-settings: normal;
+        text-align: center;
+        writing-mode: lr-tb;
+        text-anchor: middle;
+        fill: var(--colorL);
+        stroke: var(--colorR);
+        stroke-width: 4;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        paint-order: stroke markers fill;
+      }
+      .text2YJMM {
+        font-weight: bold;
+        font-stretch: condensed;
+        font-size: 12px;
+        line-height: 124%;
+        font-family: 'Agency FB';
+        -inkscape-font-specification: 'Agency FB, Bold Condensed';
+        font-variant-ligatures: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: normal;
+        font-feature-settings: normal;
+        text-align: center;
+        writing-mode: lr-tb;
+        text-anchor: middle;
+        fill: var(--colorL);
+        stroke: var(--colorR);
+        stroke-width: 2;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        paint-order: stroke markers fill;
+      }
+      .barYJMM {
+        color-interpolation: sRGB;
+        color-interpolation-filters: linearRGB;
+        vector-effect: none;
+        fill-opacity: 1;
+        fill-rule: evenodd;
+        stroke: var(--colorM);
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        paint-order: stroke fill markers;
+        enable-background: accumulate;
+      }
+      .fondoYJMM {
+        fill: var(--fondo);
+        enable-background: accumulate;
+      }
+      .lightYJMM {
+        opacity: 1;
+        color-interpolation: sRGB;
+        color-interpolation-filters: linearRGB;
+        fill: url("#gYJMM");
+        stroke: var(--colorR);
+        stroke-width: 2;
+        paint-order: stroke markers fill;
+        enable-background: accumulate;
+      }
+      .levelYJMM {
+        font-size: 11px;
+        line-height: 180%;
+        font-family: '01 DigitMono';
+        -inkscape-font-specification: '01 DigitMono, Normal';
+        writing-mode: lr-tb;
+        text-anchor: middle;
+        fill: var(--colorL);
+        fill-opacity: 1;
+        stroke: var(--colorR);
+        stroke-width: 3;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        stroke-opacity: 0.6;
+        paint-order: stroke markers fill;
+      }
+      .levelYJMM,
+      .textYJMM {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .add {
+        fill: #fbff88;
+        stroke: #c14400;
+      }
+      .off {
+        opacity: 0.6;
+        fill: #acacac;
+        stroke: #0b4200;
+        stroke-opacity: 0.6;
+      }
