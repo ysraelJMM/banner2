@@ -49,9 +49,7 @@
 
     }
     //////////////////////////////////////////////////
-    var myVar = setInterval(myTimer, 50);
-    var increment = 0;
-    var nivel = 1;
+
 
 
     let root = document.documentElement;
