@@ -49,7 +49,9 @@
 
     }
     //////////////////////////////////////////////////
-
+    var myVar = setInterval(myTimer, 50);
+    var increment = 0;
+    var nivel = 1;
 
 
     let root = document.documentElement;
@@ -224,3 +226,24 @@ function update() {
     p.draw();
   }
 }
+
+
+
+    function myTimer() {
+      if(increment <= 100){
+        progreso(increment, nivel);
+        draw(true);
+      }else{
+        draw(false);
+      }
+
+      if (increment < 120) {
+        increment += 1;
+      } else {
+        if (nivel == 5) {
+          clearInterval(myVar);
+        }
+        nivel += 1;
+        increment = 0;
+      }
+    }
