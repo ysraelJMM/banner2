@@ -183,7 +183,7 @@ function startBar(porcent) {
     }
   }
 }
-startBar(50);
+startBar(0);
 
 
 let root = document.documentElement;
