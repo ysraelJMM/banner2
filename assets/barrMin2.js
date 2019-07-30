@@ -183,8 +183,6 @@ function startBar(porcent) {
     }
   }
 }
-startBar(0);
-
 
 let root = document.documentElement;
 
