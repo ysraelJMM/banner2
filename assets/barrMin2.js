@@ -152,7 +152,7 @@ function updateBar() {
   }
 }
 
-function startBar(porcent) {
+function playBar(porcent) {
   var label = document.getElementById('labelYJMM');
   var myVar = setInterval(myTimer, 50);
   var porI = barYJMM.progress;
