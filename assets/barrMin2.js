@@ -172,9 +172,9 @@ function playBar(porcent) {
     }
     if (increment <= time) {
       progreso(porA, barYJMM);
-      barYJMM.drawBar(true, porcent);
+      barYJMM.drawBar(true);
     } else {
-      barYJMM.drawBar(false, porcent);
+      barYJMM.drawBar(false);
     }
     if (increment < time + 20) {
       increment += 1;
@@ -184,6 +184,8 @@ function playBar(porcent) {
     }
   }
 }
+playBar(50);
+
 
 let root = document.documentElement;
 
