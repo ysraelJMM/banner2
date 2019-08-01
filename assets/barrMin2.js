@@ -1,43 +1,43 @@
-function progreso(number, level) {
-  let levels = document.getElementsByClassName('levelYJMM');
-  let lights = document.getElementsByClassName('lightYJMM');
-  let label = document.getElementById('labelYJMM');
+function progreso(porcent, esto, ult = 'YJMM') {
+  let levels = document.getElementsByClassName('level' + ult);
+  let lights = document.getElementsByClassName('light' + ult);
+  let label = document.getElementById('label' + ult);
 
   for (var i = 0; i < 3; i++) {
-    if (i < level - 1 || (level == 3 && number == 100)) {
-      levels[i].setAttribute('class', 'levelYJMM');
-      lights[i].setAttribute('class', 'lightYJMM');
+    if (i < esto.level - 1 || (esto.level == 3 && porcent == 100)) {
+      levels[i].setAttribute('class', 'level' + ult);
+      lights[i].setAttribute('class', 'light' + ult);
     } else {
-      if (i == level - 1) {
-        if (number < 100) {
-          levels[i].setAttribute('class', 'levelYJMM add');
-          lights[i].setAttribute('class', 'lightYJMM add');
+      if (i == esto.level - 1) {
+        if (porcent < 100) {
+          levels[i].setAttribute('class', 'level'  + ult + ' add');
+          lights[i].setAttribute('class', 'light'  + ult + ' add');
         } else {
-          levels[i].setAttribute('class', 'levelYJMM');
-          lights[i].setAttribute('class', 'lightYJMM');
+          levels[i].setAttribute('class', 'level' + ult);
+          lights[i].setAttribute('class', 'light' + ult);
         }
       } else {
-        levels[i].setAttribute('class', 'levelYJMM off');
-        lights[i].setAttribute('class', 'lightYJMM off');
+        levels[i].setAttribute('class', 'level'  + ult + ' off');
+        lights[i].setAttribute('class', 'light'  + ult + ' off');
       }
     }
   }
-  let porcentaje = document.getElementById('porcentaje');
-  let progress = document.getElementById('progress');
-  porcentaje.innerHTML = Math.trunc(number) + '%';
-  porcentaje.setAttribute('fill', barYJMM.color2());
-  label.setAttribute('fill', barYJMM.color2());
-  porcentaje.setAttribute('stroke', barYJMM.color3());
-  label.setAttribute('stroke', barYJMM.color3());
+  let porcentaje = document.getElementById('porcent' + ult);
+  let progress = document.getElementById('progress' + ult);
+  porcentaje.innerHTML = Math.trunc(porcent) + '%';
+  porcentaje.setAttribute('fill', esto.color2());
+  label.setAttribute('fill', esto.color2());
+  porcentaje.setAttribute('stroke', esto.color3());
+  label.setAttribute('stroke', esto.color3());
   let index = '';
   let clase = 'add';
-  if (number < 25) {
+  if (porcent < 25) {
     index = 'Lets go';
-  } else if (number < 50) {
+  } else if (porcent < 50) {
     index = 'Continue';
-  } else if (number < 75) {
+  } else if (porcent < 75) {
     index = 'Keep going';
-  } else if (number < 100) {
+  } else if (porcent < 100) {
     index = 'Almost';
   } else {
     index = 'Completed';
@@ -48,19 +48,15 @@ function progreso(number, level) {
 }
 
 const maxParticles = 60;
-var canvasBar = document.getElementById("canvasBar");
-var ctxBar = canvasBar.getContext("2d");
-var counterBar = 0;
-var particlesBar = [];
-canvasBar.width = 220;
-canvasBar.height = 20;
 
-function resetBar() {
-ctxBar.fillStyle = "#393947";
-ctxBar.fillRect(0, 0, 220, 20);
-}
 
-function progressBar(hue, hueMax) {
+function progressBar(hue, hueMax, canvas = "canvasBar") {
+  this.canvas =  document.getElementById(canvas);
+  this.ctx = this.canvas.getContext("2d");
+  this.counter = 0;
+  this.canvas.width = 220;
+  this.canvas.height = 20;
+  this.particles = [];
   this.levels = [34, 77];
   this.progress = 0;
   this.widths = 0;
@@ -72,88 +68,93 @@ function progressBar(hue, hueMax) {
   this.color2 = function() { return 'hsla(' + (this.hue - 1) + ', 100%, 70%, 1)' };
   this.color3 = function() { return 'hsla(' + (this.hue - 1) + ', 90%, 25%, 1)' };
   this.draw = function() {
-    ctxBar.lineWidth = 4;
-    var gradient = ctxBar.createLinearGradient(0, 0, this.widths, 0);
+  this.ctx.lineWidth = 4;
+    var gradient = this.ctx.createLinearGradient(0, 0, this.widths, 0);
     gradient.addColorStop("0", this.color0());
     gradient.addColorStop("0.45", this.color1());
     gradient.addColorStop("1", this.color2());
-    ctxBar.strokeStyle = this.color3();
-    ctxBar.fillStyle = gradient;
+    this.ctx.strokeStyle = this.color3();
+    this.ctx.fillStyle = gradient;
     var p = new Path2D('m10 20 a10 10 0 0 1 0 -20 h ' + this.widths + ' a10 10 0 0 1 0 20z');
-    ctxBar.fill(p);
-    ctxBar.stroke(p)
+    this.ctx.fill(p);
+    this.ctx.stroke(p)
     var q = new Path2D('m ' + (this.widths + 10) + ',2.8125 a 7.5,7.5 0 0 0 -7.052735,4.978516 l -17.2539062,1.050781 -28.382812,1.470703 28.382812,1.470703 17.2519532,1.050781 a 7.5,7.5 0 0 0 7.054688,4.978516 7.5,7.5 0 0 0 7.5,-7.5 7.5,7.5 0 0 0 -7.5,-7.5 z');
-    var grad2 = ctxBar.createLinearGradient(this.widths - 50, 0, this.widths + 10, 0);
+    var grad2 = this.ctx.createLinearGradient(this.widths - 50, 0, this.widths + 10, 0);
     grad2.addColorStop(0, 'hsla(' + this.hue + ', 100%, 40%, 0.25)');
     grad2.addColorStop(1, 'hsla(100, 100%, 100%, 0.65)');
-    ctxBar.fillStyle = grad2;
-    ctxBar.fill(q);
+    this.ctx.fillStyle = grad2;
+    this.ctx.fill(q);
+  };
+  this.update = function() {
+    for (var i = 0; i < this.particles.length; i++) {
+      var p = this.particles[i];
+      p.x -= p.vx;
+      if (p.down == true) {
+        p.y += p.g;
+      } else {
+        if (p.g < 0) {
+          p.down = true;
+          p.y += p.g;
+        } else {
+          p.y = p.g;
+        }
+      }
+      p.draw();
+    }
+};
+
+  this.drawBar = function(t, porcent) {
+    this.resetBar();
+    this.counter++
+    this.hue += this.ini;
+    this.widths += 2;
+    if (this.widths > this.progress * 2) {
+      if (this.counter > porcent + 20 && t) {
+        this.resetBar();
+        this.hue = 0;
+        this.widths = 0;
+        this.counter = 0;
+        this.particles = [];
+      } else {
+        this.hue -= this.ini;
+        this.widths = this.progress * 2;
+        this.draw();
+      }
+    } else {
+      this.draw();
+      for (var i = 0; i < maxParticles; i += 10) {
+        this.particles.push(new particleBar(this));
+      }
+    }
+    this.update();
   }
+  this.resetBar = function() {
+  this.ctx.fillStyle = "#393947";
+  this.ctx.fillRect(0, 0, 220, 20);
+  }
+
 }
 
-function particleBar() {
-  barYJMM.level = 1;
-  this.x = barYJMM.widths + 16;
+function particleBar(esto) {
+  esto.level = 1;
+  this.x = esto.widths + 16;
   this.y = 12;
   this.vx = 0.8 + Math.random() * 1;
   this.v = Math.random() * 5;
   this.g = 6 + Math.random() * 5;
   this.down = false;
   this.draw = function() {
-    ctxBar.fillStyle = "white";
+    esto.ctx.fillStyle = "white";
     var size = Math.random() * 2;
-    ctxBar.fillRect(this.x, this.y, size, size);
+    esto.ctx.fillRect(this.x, this.y, size, size);
   }
 }
 
 const barYJMM = new progressBar(0,120);
 
-function drawBar(t, porcent) {
-  resetBar();
-  counterBar++
-  barYJMM.hue += barYJMM.ini;
-  barYJMM.widths += 2;
-  if (barYJMM.widths > barYJMM.progress * 2) {
-    if (counterBar > porcent + 20 && t) {
-      resetBar();
-      barYJMM.hue = 0;
-      barYJMM.widths = 0;
-      counterBar = 0;
-      particlesBar = [];
-    } else {
-      barYJMM.hue -= barYJMM.ini;
-      barYJMM.widths = barYJMM.progress * 2;
-      barYJMM.draw();
-    }
-  } else {
-    barYJMM.draw();
-    for (var i = 0; i < maxParticles; i += 10) {
-      particlesBar.push(new particleBar());
-    }
-  }
-  updateBar();
-}
 
-function updateBar() {
-  for (var i = 0; i < particlesBar.length; i++) {
-    var p = particlesBar[i];
-    p.x -= p.vx;
-    if (p.down == true) {
-      p.y += p.g;
-    } else {
-      if (p.g < 0) {
-        p.down = true;
-        p.y += p.g;
-      } else {
-        p.y = p.g;
-      }
-    }
-    p.draw();
-  }
-}
 
 function playBar(porcent) {
-  var label = document.getElementById('labelYJMM');
   var myVar = setInterval(myTimer, 50);
   var porI = barYJMM.progress;
   let time = porcent - barYJMM.progress;
@@ -170,10 +171,10 @@ function playBar(porcent) {
       barYJMM.level = 3;
     }
     if (increment <= time) {
-      progreso(porA, barYJMM.level);
-      drawBar(true);
+      progreso(porA, barYJMM);
+      barYJMM.drawBar(true, porcent);
     } else {
-      drawBar(false);
+      barYJMM.drawBar(false, porcent);
     }
     if (increment < time + 20) {
       increment += 1;
@@ -183,6 +184,8 @@ function playBar(porcent) {
     }
   }
 }
+playBar(50);
+
 
 let root = document.documentElement;
 
