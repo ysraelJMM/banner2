@@ -184,8 +184,6 @@ function playBar(porcent) {
     }
   }
 }
-playBar(50);
-
 
 let root = document.documentElement;
 
