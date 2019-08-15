@@ -163,7 +163,8 @@
         <a href="tel:8662000398">
           <circle cx="464" cy="150" fill="#f00" fill-rule="evenodd" opacity="0" r="25"/>
         </a>
-        <circle cx="500" cy="150" fill="#5593ca" fill-rule="evenodd" r="4"/>
+        <circle cx="500" cy="137" fill="#5593ca" fill-rule="evenodd" r="4"/>
+        <circle cx="500" cy="157" fill="#5593ca" fill-rule="evenodd" r="4"/>
         <text fill="#4a4a4a" font-family="Verdana" font-size="16" letter-spacing="0" word-spacing="0" x="513" y="145">
           <a href="tel:8662000398">
             <tspan x="513" y="142">866-200-0398 (Ofice)</tspan>
@@ -182,12 +183,13 @@
         <a href="mailto:email@echoecho.com?subject=SweetWords">
           <circle cx="464" cy="225" fill="#f00" fill-rule="evenodd" opacity="0" r="25"/>
         </a>
-      <circle cx="500" cy="225" fill="#5593ca" fill-rule="evenodd" r="4"/>
+      <circle cx="500" cy="212" fill="#5593ca" fill-rule="evenodd" r="4"/>
+      <circle cx="500" cy="252" fill="#5593ca" fill-rule="evenodd" r="4"/>
       <text fill="#4a4a4a" font-family="Verdana" font-size="16" letter-spacing="0" word-spacing="0" x="513" y="218.334">
         <tspan x="513" y="218">19009 ST HWY 181</tspan>
-        <tspan x="513" y="238">FAIRHOPE, AL 36532</tspan>
+        <tspan x="513" y="238">FAIRHOPE, AL 36532 (Postal)</tspan>
         <a href="mailto:email@echoecho.com?subject=SweetWords">
-          <tspan x="513" y="258">mailreferencia@algo.com</tspan>
+          <tspan x="513" y="258">mailreferencia@algo.com (Email)</tspan>
         </a>
       </text>
     </g>
