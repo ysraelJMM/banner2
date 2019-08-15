@@ -22,7 +22,6 @@
     <linearGradient id="b" gradientTransform="matrix(1 0 0 .537 0 157.274)" gradientUnits="userSpaceOnUse" x1="393.22" x2="393.22" y1="302.858" y2="634.634"><stop offset="0" stop-color="#5698cc"/><stop offset="1" stop-color="#4452ae"/></linearGradient><linearGradient id="c" gradientTransform="matrix(1.341 0 0 1.425 -1510.591 762.681)" gradientUnits="userSpaceOnUse" x1="1213.461" x2="1213.461" xlink:href="#a" y1="-259.972" y2="-523.339"/><linearGradient id="d" gradientTransform="matrix(.671 0 0 1.425 -755.295 762.681)" gradientUnits="userSpaceOnUse" x1="1213.461" x2="1213.461" xlink:href="#a" y1="-259.972" y2="-523.339"/>
   </defs>
   <path d="m0 0h800v500h-800z" fill="url(#c)" fill-rule="evenodd"/>
-  <path d="m0 0h400v500h-400z" fill="url(#d)" fill-rule="evenodd"/>
   <g transform="matrix(1.333 0 0 -1.333 -879.528 275.58)">
     <path d="m0 0 6.89-15.06 6.92 15.06h12.73v-23.2h-6.96l.17 17.36h-1.18l-8.73-17.36h-5.87l-8.73 17.36h-1.25l.17-17.36h-6.96v23.2z" fill="#fff" transform="matrix(.503 0 0 .503 689.37 15.427)"/>
     <path d="m0 0h-1.39l-4.49-8.8h10.37zm6.96-13.88h-15.34l-1.98-3.93h-8.07l12.28 23.2h10.98l12.14-23.2h-8.03z" fill="#fff" transform="matrix(.503 0 0 .503 712.498 12.716)"/>
@@ -97,7 +96,7 @@
     d="m107.77 325.89c-27.38.02-44.06 18.82-71.43 18.82-13.95 0-25.12-4.88-36.34-9.68v164.97h800v-170.24c-16.28 5.51-30.31 14.95-49.71 14.95-27.36.01-44.01-18.8-71.37-18.82-27.37.02-44.06 18.82-71.42 18.82-27.36.01-44.01-18.8-71.37-18.82-27.38.02-44.06 18.82-71.43 18.82-27.36.01-44.01-18.8-71.36-18.82-27.38.02-44.06 18.82-71.43 18.82-27.37.01-44.01-18.8-71.37-18.82-27.37.02-44.06 18.82-71.42 18.82-27.36.01-44.01-18.8-71.37-18.82z"
     fill="url(#b)"
     fill-rule="evenodd"/>
-  <path d="m400 0h400v500h-400z" fill="#fff" fill-rule="evenodd"/>
+  <path d="M 399.42693,0 H 800 V 500 H 399.42693 c 32.7972,-72.37172 39.26291,-159.20646 0,-250 -39.2629,-90.79354 -31.50494,-165.430215 0,-250 z" fill="#fff" fill-rule="evenodd"/>
   <text style="font-size:18.667;font-family:Arial;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#808080" x="603.692" y="35.324">
     <tspan font-family="Arial" font-size="18.667" text-anchor="middle" x="603.692" y="35.324">CONTACT:</tspan>
   </text>
@@ -120,7 +119,7 @@
     stroke="#5593ca"
     stroke-linejoin="round"
     stroke-width="4"/>
-  <path d="m0 0h800v500h-800z" fill="none" stroke="#ccc" stroke-linejoin="round" stroke-width="4"/>
+  <path d="m0 0h800v500h-800z" fill="none" stroke="#c8d7e5" stroke-linejoin="round" stroke-width="4"/>
   <g id="facebook" class="socialMedia">
     <title>Go to our facebook</title>
     <path
